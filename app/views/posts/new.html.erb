@@ -1,5 +1,8 @@
 <%# <p>Find me in app/views/posts/new.html.erb</p> %>
 <div class="form-container">
   <%= render 'form', post: @post%>
+  <br>
+  <button class='back-button'>
+    <%= link_to 'Back', posts_path, class: 'index-link' %>
+  </button>
 </div>
-<%= button_to 'Back', posts_path, class:'back-button' %>
