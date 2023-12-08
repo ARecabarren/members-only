@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+/* Path: app/assets/stylesheets/posts.css */
+/* Estilo para _form.html.erb */
+*= require_tree .
+*= require_self

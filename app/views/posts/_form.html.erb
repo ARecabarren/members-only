@@ -1,4 +1,11 @@
+
 <%= form_with model: @post do |form|%>
+    <div class="header-group">
+        <h1>New Post</h1>
+        <div class= 'sub-header'>
+            Tell us your anonimous words
+        </div>
+    </div>
     <div class="form-group">
         <%= form.label :title %>
         <%= form.text_field :title, class:"form-control" %>
@@ -6,10 +13,11 @@
 
     <div class="form-group">
         <%= form.label :content %>
-        <%= form.text_area :content, rows:5, class:"form-control" %>
+        <%= form.text_area :content, rows:10, class:"form-control" %>
     </div>
 
-    <div class="form-group">
-        <%= form.submit "Create Post", class:"btn btn-primary"%>
+    <div class="submit-group">
+        <%= form.submit "Create Post"%>
     </div>
 <% end %>
+<%# <script type="text/javascript" src="https://form.jotform.com/jsform/233413301606645"></script> %>
