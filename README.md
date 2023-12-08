@@ -1,5 +1,3 @@
-  Sure, here's an example of a README.md file for the Members Only project:
-
 Members Only
 ------------
 
