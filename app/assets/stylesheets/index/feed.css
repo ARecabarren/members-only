@@ -46,18 +46,18 @@
     grid-column-start: 1;
     justify-self: start;
     text-decoration-line: none;
-    border: 1.5px solid black;
-    border-radius: 6%;
+    /* border: 1.5px solid black; */
+    /* border-radius: 10% 10% 10% 10%; */
     padding: 5px;
     margin-bottom: 10px;
-    width: 30%;
-    height: 20px;
+    width: 20%;
+    height: 40px;
     text-align: center;
-    color:var(--link-color)
+    /* color:var(--link-color) */
 }
 
 .new-post-container .new-post-button:visited{
-    color:var(--link-color)
+    /* color:var(--link-color) */
 }
 
 /* Individual post style */
@@ -65,4 +65,5 @@
 .post{
     border: 2px solid black;
     margin-bottom: 5px;
+    padding: 1em;
 }

@@ -1,0 +1,22 @@
+<div class="header-content bg-body-tertiary">
+  <div class="header-items">
+    <% if user_signed_in? %>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Welcome <%= current_user.username %>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <a href="" class="dropdown-item"><%= button_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class:'dropdown-item' %></a>
+          </li>
+        </ul>
+      </div>
+    <% else %>
+      <p>Welcome Guest!</p>
+      <%= button_to 'Iniciar sesión', new_user_session_path, method: :get, class: 'btn btn-primary' %>
+      <%= button_to 'Registrarse', new_user_registration_path, method: :get, class: 'btn btn-secondary' %>
+    <%end%>
+  </div>
+</div>

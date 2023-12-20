@@ -1,0 +1,6 @@
+.header-items, .header-content{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 40px;
+    padding-right: 40px;
+}
