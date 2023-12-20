@@ -1,17 +1,17 @@
 <div class = "posts">
   <div class="new-post-container">
-    <%= link_to "New Post", new_post_path, class: "new-post-button" %>
+    <%= link_to "New Post", new_post_path, class: "new-post-button btn btn-primary" %>
   </div>
-  <div class="posts-header">
+  <div class="posts-header bg-body-tertiary">
     <div class="header-title">Title</div>
     <div class="header-title">Author</div>
     <div class="header-title">Published</div>
   </div>
   <% @posts.each do |post|%>
-    <div class="post">
-      <div class="posts-body">
+    <div class="post card">
+      <div class="posts-body card-body">
         <div class="post-summary">
-          <h3><%= post.title %></h3>
+          <h4><%= post.title %></h3>
           <p><%= post.body.truncate(100) %></p>
         </div>
         <p class='post-info'><%= User.find(post.user_id).username%></p>
