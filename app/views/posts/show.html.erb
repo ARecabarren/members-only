@@ -1,0 +1,8 @@
+<!-- app/views/posts/show.html.erb -->
+
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<p>Author: <%= @post.user.username %></p>
+<p>Published: <%= @post.created_at.strftime("%B %d, %Y %I:%M %p") %></p>
+
+<%= link_to "Back to Posts", posts_path %>
