@@ -1,4 +1,7 @@
 <div class = "posts">
+  <div class="new-post-container">
+    <%= link_to "New Post", new_post_path, class: "new-post-button" %>
+  </div>
   <div class="posts-header">
     <div class="header-title">Title</div>
     <div class="header-title">Author</div>
@@ -12,7 +15,7 @@
           <p><%= post.body.truncate(100) %></p>
         </div>
         <p class='post-info'><%= User.find(post.user_id).username%></p>
-        <p class='post-info'><%= post.created_at%></p>
+        <p class='post-info'><%= post.created_at.strftime("%B %d, %Y %I:%M %p")%></p>
       </div>
     </div>
   <%end%>

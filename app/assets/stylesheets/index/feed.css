@@ -1,11 +1,17 @@
+:root{
+    --link-color: darkslateblue
+}
 .posts{
     margin: 5% 10%;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .posts-header {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     justify-items: center;
+    padding: 5px;
 }
 
 .posts-body{
@@ -20,8 +26,43 @@
     margin-left: 5%;
 }
 
+.post-summary p{
+    margin-top: 3px;
+}
+
 .post-info{
     justify-self: center;
     padding-top: 10%;
 }
 
+.new-post-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding-bottom: 2%;
+    --link-color: darkslateblue
+}
+
+.new-post-container .new-post-button{
+    grid-column-start: 1;
+    justify-self: start;
+    text-decoration-line: none;
+    border: 1.5px solid black;
+    border-radius: 6%;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 30%;
+    height: 20px;
+    text-align: center;
+    color:var(--link-color)
+}
+
+.new-post-container .new-post-button:visited{
+    color:var(--link-color)
+}
+
+/* Individual post style */
+
+.post{
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
