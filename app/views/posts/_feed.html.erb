@@ -14,7 +14,11 @@
           <h4><%= post.title %></h3>
           <p><%= post.body.truncate(100) %></p>
         </div>
-        <p class='post-info'><%= User.find(post.user_id).username%></p>
+        <% if user_signed_in?%>
+          <p class='post-info'><%= User.find(post.user_id).username%></p>
+        <% else %>
+          <p></p>
+        <%end%>
         <p class='post-info'><%= post.created_at.strftime("%B %d, %Y %I:%M %p")%></p>
       </div>
     </div>
