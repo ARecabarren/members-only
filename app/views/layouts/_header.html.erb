@@ -9,14 +9,16 @@
           <li><a class="dropdown-item" href="#">Profile</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
           <li>
-            <a href="" class="dropdown-item"><%= button_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class:'dropdown-item' %></a>
+            <%= button_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class:'dropdown-item' %>
           </li>
         </ul>
       </div>
     <% else %>
-      <p>Welcome Guest!</p>
-      <%= button_to 'Iniciar sesión', new_user_session_path, method: :get, class: 'btn btn-primary' %>
-      <%= button_to 'Registrarse', new_user_registration_path, method: :get, class: 'btn btn-secondary' %>
+      <div class="guest-content">
+          <p>Welcome Guest!</p>
+          <%= button_to 'Iniciar sesión', new_user_session_path, method: :get, class: 'btn btn-primary' %>
+          <%= button_to 'Registrarse', new_user_registration_path, method: :get, class: 'btn btn-secondary' %>
+      </div>
     <%end%>
   </div>
 </div>

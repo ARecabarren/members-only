@@ -1,6 +1,22 @@
+.header-content{
+
+}
+
 .header-items, .header-content{
     display: flex;
     flex-direction: row-reverse;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+.guest-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+    padding: 10px;
+    align-items: center;
+}
+
+.guest-content button{
+    width:100px;
+    height: 70px;
 }
